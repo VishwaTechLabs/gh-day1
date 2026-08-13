@@ -1,9 +1,17 @@
-name: first yaml file
-on: [ "main" ]
+name: First YAML file
+
+on:
+  push:
+    branches:
+      - "main"
+
 jobs:
-  name: first-job
-  runs-on: ubuntu:latest
-  steps:
-     - name: execute the simple command
-       command: pwd
-     
+  first-job:
+    name: First job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print working directory
+        run: pwd
