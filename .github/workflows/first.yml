@@ -1,0 +1,9 @@
+name: first yaml file
+on: [ "main" ]
+jobs:
+  name: first-job
+  runs-on: ubuntu:latest
+  steps:
+     - name: execute the simple command
+       command: pwd
+     
